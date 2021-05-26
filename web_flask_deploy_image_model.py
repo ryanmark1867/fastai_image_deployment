@@ -38,10 +38,10 @@ def show_prediction():
     # the scoring parameters are sent to this page as parameters on the URL link from home.html
     # load the scoring parameter
     image_file_name = request.args.get("file_name")
-    image_file_path = request.args.get("file_path")
+    # image_file_path = request.args.get("file_path")
     # build the fully qualified file name
-    #full_path = os.path.join(path,image_directory,image_file_name)
-    full_path = os.path.join(image_file_path,image_file_name)
+    full_path = os.path.join(path,image_directory,image_file_name)
+    #full_path = os.path.join(image_file_path,image_file_name)
     print("full_path is: ",full_path)
     img = PILImage.create(full_path)
     # apply the model to the image
